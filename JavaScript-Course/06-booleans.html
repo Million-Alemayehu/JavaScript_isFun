@@ -66,8 +66,19 @@
 
       // Ternary Operator
 
-      true ? 'truthy' : 'falsy';
+      const result = 0 ? 'truthy' : 'falsy';
+      console.log(result);
 
+      //Guard Operator &&
+
+      false && console.log('hello');
+
+      const message = 5 && 'hello';
+      console.log(message);
+
+      //default Operator || OR Operator ||
+      const currency = undefined || 'USD';
+      console.log(currency);
 
 
     </script>
