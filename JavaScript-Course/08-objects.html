@@ -7,6 +7,7 @@
 </head>
   <body>
     <script>
+      /*
       const Product = {
         name: 'Socks',
         price: 5.99
@@ -26,6 +27,37 @@
       console.log(Product);
       delete Product.newProperty;
       console.log(typeof Product);
+      */
+
+      const product2 = {
+        name: 'Shirt',
+        ['delivery-time']: '1 days',
+        rating: {
+          stars: 4.5,
+          count: 100
+        },
+        fun: function function1(){
+          console.log('this is a function inside an object');
+        }
+      };
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']);
+      console.log(product2['delivery-time']);
+
+      console.log(product2.rating);
+      console.log(product2.rating.stars);
+      console.log(product2['rating']['count']);
+      product2.fun();// calling the function inside the object also called method
+      console.log(typeof console);
+      console.log(typeof product2);
+      console.log(typeof console.log);
+
+      JSON.stringify(product2);// converting object to string format 
+      console.log(JSON.stringify(product2));
+      const jsonString = JSON.stringify(product2);
+      JSON.parse(jsonString);// converting string format to object
+      console.log(JSON.parse(jsonString));
     </script>
   </body>
 </html>
