@@ -29,6 +29,8 @@
       console.log(typeof Product);
       */
 
+      /*
+
       const product2 = {
         name: 'Shirt',
         ['delivery-time']: '1 days',
@@ -58,6 +60,16 @@
       const jsonString = JSON.stringify(product2);
       JSON.parse(jsonString);// converting string format to object
       console.log(JSON.parse(jsonString));
+      */
+
+      //Auto-Boxing 
+
+      console.log('hello'.length);// behind the scene JS converts string to String object and then calls length property this is called auto-boxing
+      console.log('hello'.toUpperCase());
+
+      // Object Reference vs Object Copy
+    
+
     </script>
   </body>
 </html>
