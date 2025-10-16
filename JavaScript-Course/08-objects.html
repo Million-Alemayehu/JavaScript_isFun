@@ -68,6 +68,32 @@
       console.log('hello'.toUpperCase());
 
       // Object Reference vs Object Copy
+      const object1 = {
+        message:'Hello'//When we create an object it is stored in the heap memory the object1 variable stores the address of the object in the heap memory or the reference of the object
+      };
+
+      const object2 = object1;// object2 is storing the reference of object1 not a copy of the object1 this is called copy by reference
+      object1.message = 'Good Job';
+      console.log(object1); //even though we used const we can change the property of the object because the reference of the object is stored in the variable not the object itself
+      console.log(object2);//object2 also shows the updated value because object2 is storing the reference of object1
+
+      const object3 = {
+        message:'Good Job'
+      };
+      console.log(object1 === object3);// this will give false because both are different objects in the heap memory even though they have the same properties and values this is called copy by value
+      console.log(object1 === object2);// this will give true because both are storing the reference of the same object in the heap memory
+
+      //Shortcut for objects
+      
+      const object4 = {
+        message:'Good Job',
+        price:799
+      };
+
+      //const message = object4.message;
+      const {message, price} = object4;// this is called destructuring assignment it is a shortcut to extract properties from an object
+      console.log(message);
+      console.log(price);
     
 
     </script>
