@@ -5,13 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DOM</title>
 </head>
-//the DOM is the document object model
-//it is a built-in object provided by javascript
+
 <body>
+  <!--the DOM is the document object model
+  it is a built-in object provided by javascript-->
   <button>hello</button>
+  <button class="js-button">Second button</button>
 
   <script>
+    console.log(document.querySelector('button').innerHTML);//this method is used to select an element from the html document
+
+    document.querySelector('button').innerHTML = 'Changed';
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
+
+    /*
+    console.log(document.title);
+    document.title = 'Changed';
+    console.log(document.body);
+    console.log(typeof document.body)
+
+    console.log(document.body.innerHTML);
+
+    document.body.innerHTML = '<button>Good Job!</button>';
+    */
+
+    /*
     document.body.innerHTML = 'hello';//document is the built-in object the dot notation is used to access the properties of the object 
+    document.title = 'Good Job';
+    */
+
   </script>
 </body>
 </html>

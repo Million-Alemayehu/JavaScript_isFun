@@ -62,6 +62,8 @@
       console.log(JSON.parse(jsonString));
       */
 
+      /*
+
       //Auto-Boxing 
 
       console.log('hello'.length);// behind the scene JS converts string to String object and then calls length property this is called auto-boxing
@@ -94,8 +96,27 @@
       const {message, price} = object4;// this is called destructuring assignment it is a shortcut to extract properties from an object
       console.log(message);
       console.log(price);
-    
+      */
+      /*
+      let o1 = Object.create({x:1, y:2});
+      
+      console.log(o1.x + o1.y);
+      */
+      let o = {x: "don't change this value"};
+      library.function(object.create(o));//guarding the object from being modified
+     /*
+     let book = {
+      title: "JavaScript",
+      author: {
+        firstname: "John",
+        lastname: "Doe"
+      },
 
+     };
+
+      let author = book.author;
+      console.log(author);
+      */
     </script>
   </body>
 </html>
