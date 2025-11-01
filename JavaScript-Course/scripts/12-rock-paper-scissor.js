@@ -15,6 +15,22 @@ if(score === null){
 }
 */
 
+let isAutoPlaying = false;
+let intervalId;
+
+function autoPlay(){
+  if(!isAutoPlaying){
+    intervalId = setInterval(function(){
+      const playerMove = pickComputerMove();
+      playGame(playerMove);
+    },1000);
+    isAutoPlaying = true;
+  }else{
+    clearInterval(intervalId);
+    isAutoPlaying = false;
+  } 
+}
+
 function playGame(playerMove){
   const computerMove = pickComputerMove();
   let result = ''; 
